@@ -20,7 +20,7 @@ class _GetStartedState extends State<GetStarted> {
     // TODO: implement initState
     super.initState();
 
-    am();
+    // am();
   }
 
   void am() async {
@@ -94,14 +94,19 @@ class _GetStartedState extends State<GetStarted> {
                 ),
                 InkWell(
                   onTap: () async {
-                    if (await signing()) {
-                      await getuser();
-                      Navigator.pushReplacement(
+                    // if (await signing()) {
+                    //   await getuser();
+                    //   Navigator.pushReplacement(
+                    //       context,
+                    //       MaterialPageRoute(
+                    //         builder: (context) => Decider(),
+                    //       ));
+                    // }
+                      Navigator.push(
                           context,
                           MaterialPageRoute(
                             builder: (context) => Decider(),
                           ));
-                    }
                   },
                   onHover: (value) {
                     setState(() {
